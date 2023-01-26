@@ -1,19 +1,19 @@
 /* Google Font Import - Poppins */
-
-/* ------------------------dashboard start--------------------------- */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
 
 :root{
+
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #695CFE;
+    --primary-color: #0d4c91;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
@@ -22,6 +22,7 @@
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
+
 }
 
 body{
@@ -37,12 +38,14 @@ body{
 }
 
 body.dark{
+
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+
 }
 
 /* ===== Sidebar ===== */
@@ -146,7 +149,7 @@ header .image-text .profession{
     height: 30px;
     width: 30px;
     background-color: #F7F4FC;
-    color: #6424EB;
+    color: #0d4c91;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -196,7 +199,7 @@ header .image-text .profession{
     display: flex;
     align-items: center;
     /* height: 100%; */
-    width: 100%;
+    /* width: 100%; */
     border-radius: 6px;
     text-decoration: none;
 }
@@ -205,13 +208,13 @@ header .image-text .profession{
     width: 100%;
     height: 50px;
     background-color: #F7F4FC;
-    border-left: 3px solid #6424EB;
+    border-left: 3px solid #0d4c91;
     border-radius: 0px 5px 5px 0px;
     
 }
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
-    color: #6424EB!important;
+    color: #0d4c91!important;
 }
 /* .sidebar .login-nav  li a:hover .login-nav.icon{
     color: #6424EB;
@@ -293,12 +296,28 @@ body.dark .switch::before{
     left: 20px;
 }
 
-.menu-bar .nav-link svg{
-    height: 17px;
-    width: auto;
+.menu-bar .nav-link i{
+    font-size: 17px;
 }
 .nav-link{
     padding: 0;
+}
+.nav-link .newsletter-drop{
+    width: auto!important;
+}
+
+
+
+
+.nav-link .dropdown-menu {
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: rgba(87, 87, 87, 0.09) 0px 3px 12px;
+}
+.nav-link  .dropdown-menu li a{
+    font-size: 13px;
+    color: #949494!important;
 }
 .home{
     position: absolute;
@@ -311,8 +330,8 @@ body.dark .switch::before{
     transition: var(--tran-05);
 }
 .home .text{
-    font-size: 30px;
-    font-weight: 500;
+    /* font-size: 30px;
+    font-weight: 500; */
     color: var(--text-color);
     padding: 12px 60px;
 }
@@ -326,7 +345,7 @@ body.dark .home .text{
     color: var(--text-color);
 }
 .menu-bar button{
-    background-color: #6424EB;
+    background-color: #0d4c91;
     padding: 15px 60px;
     color: white;
     border-radius: 15px;
@@ -336,8 +355,8 @@ body.dark .home .text{
 }
 .menu-bar button:hover, .menu-bar button:focus, .menu-bar button.active{
     background-color: transparent;
-    border: 1px solid #6424EB;
-    color: #6424EB;
+    border: 1px solid #0d4c91;
+    color: #0d4c91;
 }
 .home img{
     right: 0;
@@ -350,7 +369,7 @@ body.dark .home .text{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid #6424EB;
+    border: 1px solid #0d4c91;
 }
 .right-end{
     justify-content: right;
@@ -361,20 +380,29 @@ body.dark .home .text{
     color: #707070;
 }
 .home-cards .card{
-    border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     width: 100%;
     height: 100%;
     
 }
+.home-cards .card form input{
+    border: 0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    font-size: 13px;
+}
+.home-cards .card form input::placeholder{
+    font-size: 13px;
+}
 /* .login-nav li a:hover .login-nav svg, .login-nav li a:focus .login-nav svg{
     color: red;
 } */
 
 .nav-bg{
-    background-color: #6424EB;
+    background-color: #0d4c91;
     border-radius: 0px 5px 5px 0px;
 }
 .login-nav svg{
@@ -389,9 +417,10 @@ body.dark .home .text{
 .menu-links{
     padding: 0;
 }
+
 .admin-card .card{
     border: 0;
-    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -418,11 +447,52 @@ body.dark .home .text{
     color: black;
 }
 
-/* ------------------------dashboard end--------------------------- */
 
+.home .dashboard-btn{
+    background-color: #0d4c91;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+.home .dashboard-btn:hover, .home .dashboard-btn.active, .home .dashboard-btn:focus{
+    background-color: white!important;
+    color: #0d4c91;
+    border: 1px solid #0d4c91;
+}
+.custom-card-3{
+ width: 1200px;
+ margin: 0 auto;
+}
 
-
-
+.data-card{
+    border: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.custom-card-2{
+    padding: 15px;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+.custom-card-2 .submit_btn{
+    background-color: #0d4c91!important;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+.custom-card-2 button:hover, .custom-card-2 button.active, .custom-card-2 button:focus{
+    background-color: white!important;
+    color: #0d4c91;
+    border: 1px solid #0d4c91;
+}
+.form-select {
+    color: rgb(77, 76, 76)!important;
+}
 /* ------------------------login-page start--------------------------- */
 
 .login-page{
@@ -432,7 +502,7 @@ body.dark .home .text{
     padding: 30px;
 } */
 .login-page h1{
-    color: #6424EB;
+    color: #0d4c91;
 }
 .login-page .login-bg{
     background-image: url("../images/login.svg");
@@ -469,7 +539,7 @@ body.dark .home .text{
     font-size: 13px;
 }
 .login-page  form button{
-    background-color: #6424EB;
+    background-color: #0d4c91;
     color: white;
     transition: 0.3s ease;
     padding: 10px 30px;
@@ -486,3 +556,4 @@ body.dark .home .text{
 }
 
 /* ------------------------login-page start--------------------------- */
+

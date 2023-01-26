@@ -1,19 +1,19 @@
+<?php
+session_start();
+include("assets/includes/db.php");
+?>
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
 
-  <?php
-
+    <?php
     include("style.php");
-
     ?>
 
-    <title>Dashboard</title>
-
-  </head>
-  
-    <?php include("assets/contents/nav.php") ?>
-
+<title>Dashboard</title>
+</head>
+<body>
+    <?php include("assets/content/navbar.php") ?>
 <section class="home">
     <div class="text">
         <div class="admin-card">
@@ -36,7 +36,7 @@
                             <img src="images/profile pic.png" alt="" class="img-fluid">
                         </div>
                         <div class="dropdown">
-                            <a href="" class="dropdown-toggle ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Admin name</a>
+                            <a href="" class="dropdown-toggle ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Najm</a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -222,63 +222,12 @@
                         </div>
                     </div>
                 </div>
-
-                
-
-
             </div>
-
-
-
-
           </div>
-
     </div>
 </section>
 
-<script>
-    const body = document.querySelector('body'),
-  sidebar = body.querySelector('nav'),
-  toggle = body.querySelector(".toggle"),
-  searchBtn = body.querySelector(".search-box"),
-  modeSwitch = body.querySelector(".toggle-switch"),
-  modeText = body.querySelector(".mode-text");
-
-
-toggle.addEventListener("click" , () =>{
-sidebar.classList.toggle("close");
-})
-
-searchBtn.addEventListener("click" , () =>{
-sidebar.classList.remove("close");
-})
-
-modeSwitch.addEventListener("click" , () =>{
-body.classList.toggle("dark");
-
-// if(body.classList.contains("dark")){
-//     modeText.innerText = "Light mode";
-// }else{
-//     modeText.innerText = "Dark mode";
-    
-// }
-});
-
-</script>
-
-</body>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-
+<?php include("assets/content/script.php"); ?>
   </body>
   
 </html>
