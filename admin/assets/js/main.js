@@ -3,18 +3,23 @@ const body = document.querySelector('body'),
     toggle = body.querySelector(".toggle"),
     searchBtn = body.querySelector(".search-box");
 
-
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 })
 
-searchBtn.addEventListener("click", () => {
-    sidebar.classList.remove("close");
-})
-
 let toolbaroptions = [
     ['bold', 'italic', 'underline', 'strike'],
-    ['blockquote', 'code-block']
+    ['blockquote', 'code-block'],
+    [{'header':[1,2,3,4,5,6,false]}],
+    [{'list':'ordered'},{'list':'bullet'}],
+    [{'script':'sub'},{'script':'super'}],
+    [{'indent':'-1'},{'indent':'+1'}],
+    [{'direction':'rtl'}],
+    [{'size':['small',false,'large','huge']}],
+    ['link','image','video','formula'],
+    [{'color':[]},{'background':[]}],
+    [{'font':[]}],
+    [{'align':[]}]
 
 ];
 
@@ -24,3 +29,8 @@ var quill = new Quill('#editor', {
         toolbar: toolbaroptions
     }
   });
+
+  
+function changeNav(id) {
+    $("#" + id).addClass("nav-active");
+}

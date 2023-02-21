@@ -7,7 +7,7 @@ include("assets/includes/db.php");
 <head>
 
 <?php
-include("style.php");
+include("assets/css/style.php");
 ?>
 
 <title>Customers</title>
@@ -66,7 +66,7 @@ include("style.php");
                             <div class="mb-3">
                                 <input type="hidden" name="old_img" value="<?php echo $img ?>">
                                 <input type="hidden" name="id" value="<?php echo $id ?>">
-                                <button type="submit" class="btn submit_btn float-end" name="update_customer" style="background-color:0d4c91;">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm submit_btn float-end" name="update_customer" style="background-color:0d4c91;">SUBMIT</button>
                             </div>
                         </form>
                     </div>
@@ -74,5 +74,8 @@ include("style.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("customer-nav");
+    </script>
 </body>
 </html>

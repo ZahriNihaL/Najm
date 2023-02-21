@@ -7,7 +7,7 @@ include("assets/includes/db.php");
 <head>
 
     <?php
-    include("style.php");
+    include("assets/css/style.php");
     ?>
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
@@ -62,7 +62,8 @@ include("assets/includes/db.php");
                                 <div id="editor"></div>
                             </div>                                                       
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-success float-end" name="add_news_letter" style="background-color:#0d4c91;">SEND</button>
+                                <input type="hidden" name="desc" id="desc">
+                                <button type="submit" class="btn btn-success btn-sm float-end" name="add_news_letter" style="background-color:#0d4c91;">SEND</button>
                             </div>
                         </form>
                     </div>
@@ -71,5 +72,11 @@ include("assets/includes/db.php");
         </section>
 
         <?php include("assets/content/script.php"); ?>
+        <script>
+             changeNav("newsletter-nav");
+            quill.on("text-change", function() {
+                $("#desc").val(quill.container.innerHTML);
+            })
+        </script>
 </body>
 </html>

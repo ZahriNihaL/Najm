@@ -7,7 +7,7 @@ include("assets/includes/db.php");
 <head>
 
     <?php
-    include("style.php");
+    include("assets/css/style.php");
     ?>
 
 <title>Category</title>
@@ -57,7 +57,7 @@ include("assets/includes/db.php");
                                 <input type="text" class="form-control" name="category_name" id="category_name" placeholder="Enter the Category name" required>
                             </div>                       
                             <div class="mb-3">
-                                <button type="submit" class="btn submit_btn float-end" name="add_category" style="background-color:#0d4c91;">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm submit_btn float-end" name="add_category" style="background-color:#0d4c91;">SUBMIT</button>
                             </div>
                         </form>
                     </div>
@@ -65,5 +65,8 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("category-nav");
+    </script>
 </body>
 </html>

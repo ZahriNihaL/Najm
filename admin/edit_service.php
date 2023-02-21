@@ -1,15 +1,12 @@
 <?php
 include("assets/includes/db.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <?php
-    include("style.php");
+    include("assets/css/style.php");
     ?>
-
 <title>Services</title>
 </head>
 <body>
@@ -82,7 +79,7 @@ include("assets/includes/db.php");
                             <div class="mb-3">
                                 <input type="hidden" name="old_img" value="<?php echo $img ?>">
                                 <input type="hidden" name="id" value="<?php echo $id ?>">
-                                <button type="submit" class="btn submit_btn float-end" name="update_service" style="background-color:0d4c91;">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm submit_btn float-end" name="update_service" style="background-color:0d4c91;">SUBMIT</button>
                             </div>
                         </form>
                     </div>
@@ -90,6 +87,9 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("service-nav");
+    </script>
 </body>
 </html>
 

@@ -1,15 +1,12 @@
 <?php
 include("assets/includes/db.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <?php
-    include("style.php");
+    include("assets/css/style.php");
     ?>
-
 <title>Category</title>
 </head>
 <body>
@@ -66,7 +63,7 @@ include("assets/includes/db.php");
                             </div>                       
                             <div class="mb-3">
                                 <input type="hidden" name="id" value="<?php echo $id ?>">
-                                <button type="submit" class="btn submit_btn float-end" name="update_category">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm submit_btn float-end" name="update_category">SUBMIT</button>
                             </div>
                         </form>
                     </div>
@@ -74,6 +71,9 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("category-nav");
+    </script>
 </body>
 </html>
 

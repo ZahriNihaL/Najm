@@ -7,7 +7,7 @@ include("assets/includes/db.php");
 <head>
 
     <?php
-    include("style.php");
+    include("assets/css/style.php");
     ?>
 
 <title>Testimonial</title>
@@ -81,5 +81,8 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("testimonial-nav");
+    </script>
 </body>
 </html>

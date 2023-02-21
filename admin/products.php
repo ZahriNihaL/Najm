@@ -7,7 +7,7 @@ include("assets/includes/db.php");
 <head>
 
 <?php
-include("style.php");
+include("assets/css/style.php");
 ?>
 
 <title>Products</title>
@@ -20,11 +20,11 @@ include("style.php");
             <div class="admin-card">
                 <div class="card">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col-lg-11">
+                      <div class="row align-items-center">
+                        <div class="col-lg-10">
                             <h4 class="card-title ms-0 fw-bold mt-3">PRODUCTS</h4>
                         </div>
-                        <div class="col-lg-1 right-end">                                           
+                        <div class="col-lg-2 text-end">                                           
                             <a href="add_products.php" class="btn dashboard-btn me-auto" style="background-color: #0d4c91;">Add Products</a>
                         </div>
                       </div>                                   
@@ -63,15 +63,13 @@ include("style.php");
                             while($row = mysqli_fetch_array($run)){
                                 $id = $row["id"];
                                 $name = $row["name"];
-                                $category_name = $row["category_name"];                                             
+                                $category = $row["category_name"];                                             
                                 $img = $row["img"];   
                                 
-                            $sql = "select * from tbl_category";
-                            $run = mysqli_query($con, $sql);
-                            while($row = mysqli_fetch_array($run)){
-
-                                $category_name = $row["category_name"];
-                                
+                            $cat_sql = "select * from tbl_category where id='$category'";
+                            $cat_run = mysqli_query($con, $cat_sql);
+                            while($cat_row = mysqli_fetch_array($cat_run)){
+                                $category_name = $cat_row["category_name"];
                             } 
                         ?>
                         
@@ -79,31 +77,31 @@ include("style.php");
                             <div class="card data-card">
                                 <div class="card-body p-2 text-center">
                                     <img src="assets/images/products/<?php echo $img ?>" class="img-fluid"> 
-                                    <h4 class="fw-bold mt-2"><?php echo $name ?></h4> 
-                                    <h4 class="fw-bold mt-2"><?php echo $category_name ?></h4>
+                                    <h6 class="fw-bold mt-2"><?php echo $name ?></h6> 
+                                    <h6 class="mt-2"><?php echo $category_name ?></h6>
 
                                     <div class="d-flex justify-content-center mt-3">
                                         <form method="post" action="edit_products.php">
                                             <input type="hidden" name="id" value="<?php echo $id ?>">
-                                            <button type="submit" name="update_products" class="btn btn-primary me-2">Update</button>
+                                            <button type="submit" name="update_products" class="btn btn-primary me-2" style="background-color: #0d4c91; border: 0;">Update</button>
                                         </form>             
                                         <form method="post" action="assets/functions/functions.php">
                                             <input type="hidden" name="id" value="<?php echo $id ?>">
-                                            <button type="submit" name="delete_products" class="btn btn-danger">Delete</button>
+                                            <button type="submit" name="delete_products" class="btn btn-danger" onclick="return confirm('Are you sure to delete?');" style="background-color: #ac0404; border: 0;">Delete</button>
                                         </form>                            
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <?php } ?>
-
-
-                        
+                        <?php } ?>                     
                     </div>
                 </div>
             </div>                                   
         </div>
     </section>
     <?php include("assets/content/script.php"); ?>
+    <script>
+        changeNav("products-nav");
+    </script>
 </body>
 </html>

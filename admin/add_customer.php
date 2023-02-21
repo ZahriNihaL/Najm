@@ -6,7 +6,7 @@ include("assets/includes/db.php");
 <html lang="en">
 <head>
     <?php
-    include("style.php");
+    include("assets/css/style.php");
     ?>
 <title>Customers</title>
 </head>
@@ -64,5 +64,8 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("customer-nav");
+    </script>
 </body>
 </html>
